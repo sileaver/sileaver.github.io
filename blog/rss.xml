@@ -4,10 +4,18 @@
         <title>My Site Blog</title>
         <link>https://sileaver.github.io/blog</link>
         <description>My Site Blog</description>
-        <lastBuildDate>Sat, 28 May 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 14 Jun 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[jupyter]]></title>
+            <link>https://sileaver.github.io/blog/2022/6/14/jupyter</link>
+            <guid>/2022/6/14/jupyter</guid>
+            <pubDate>Tue, 14 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Jupyter Notebook是数据科学家最重要的工具之一。这款工具很容易上手，但是你可能不知道它有强大的快捷键功能，可以大大加快你的开发效率。本文将介绍在MacBook中的快捷键操作。Windows用户和本文中的操作会略有不同。]]></description>
+            <content:encoded><![CDATA[<h1>Jupyter notebook中你所不知道的快捷键</h1><p>Jupyter Notebook是数据科学家最重要的工具之一。这款工具很容易上手，但是你可能不知道它有强大的快捷键功能，可以大大加快你的开发效率。本文将介绍在MacBook中的快捷键操作。Windows用户和本文中的操作会略有不同。</p><p>快捷键分为<strong>*命令模式（Command Mode<!-- -->*<!-- -->）</strong>和<strong>*编辑模式(Edit Mode)<!-- -->*</strong>。命令模式操作到对象是单元格（cell）。也就是可以对单元格进行插入删除等操作。当在命令模式的时候，单元格左侧的颜色是<em>蓝色</em>的。</p><p><img loading="lazy" src="https://pic4.zhimg.com/80/v2-1ec86119b657f6defb3c6cda0f46a257_720w.jpg" alt="img" class="img_E7b_"></p><p>当切换到编辑模式到时候，操作的是单元格中的文本和代码。单元格左侧的颜色会变成<em>绿色</em>，如下图：</p><p><img loading="lazy" src="https://pic3.zhimg.com/80/v2-380fc10c8bf4615e7927dc0a01bcd4fe_720w.jpg" alt="img" class="img_E7b_"></p><p>下面我们将对这些快捷键进行详细的介绍。</p><p><strong>命令模式：</strong></p><ol><li>Esc + H: 当你忘记快捷键的时候可以使用快捷键找到快捷键列表。</li></ol><p><img loading="lazy" src="https://pic2.zhimg.com/80/v2-0485c818bddacb3a291c05def48312f5_720w.jpg" alt="img" class="img_E7b_">ESC +H：快捷键列表</p><p>Esc + P：打开命令面板(Command Palette)是另一种找到命令的办法。</p><p><img loading="lazy" src="https://pic4.zhimg.com/80/v2-24440329155ccf61c544a86d3b145c93_720w.jpg" alt="img" class="img_E7b_">ESC + P：打开命令面板</p><p>\2. Enter（回车）：切换到编辑模式。</p><p>Esc：切换到命令模式</p><p>\3. Esc + M：将单元格切换到markdown模式。这种模式你可以编辑标题和图片等。</p><p>Esc + Y：将单元格切换到代码模式，写代码。</p><p>Esc + R：将单元格切换到非markdown的文本编辑模式。</p><p>\4. Shift + enter：运行当前单元格的内容，选中下一个单元格的内容。光标会进入下一个单元格。</p><p>Ctrl + enter: 运行当前内容，光标保留在当前单元格。</p><p>\5. Ecs + 1：单元格切换为markdown中的标题一。Esc + 1，2，3，4，5分别对应不同级别的标题。</p><p>\6. Esc + A：在单元格上方插入单元格。</p><p>Esc + B：在单元格下方插入单元格。</p><p>Esc + X：剪切单元格。</p><p>Esc + C：复制单元格。</p><p>Esc + V: 粘贴单元格。</p><p>Esc + Z：撤销删除单元格。</p><p>Esc + D：删除单元格。</p><p>\7. Esc + Shift + ⬆️：选中本单元格和上侧的单元格。</p><p>Esc + Shift + ⬇️：选中本单元格和下侧的单元格。</p><p>\8. Esc + Shift + M：合并（merge）选中的单元格。</p><p>\9. Esc + 空格：下滚页面。</p><p>Esc + Shift + 空格: 上滚页面。</p><p><strong>编辑模式：</strong></p><p><strong>本文的实验在MacBook中完成，Command键对应windows电脑中的ctrl键。</strong></p><ol><li>Command + ]：向右缩进。</li></ol><p>Command + [：向左缩进。</p><p>\2. Command + z： 撤销。</p><p>Command + Shift + z: 还原。</p><p>\3. Command + ⬅️：回到行首。</p><p>Command + ➡️：到行尾。</p><p>\4. option + ⬅️：向左移动一个词的距离。</p><p>option + ➡️：向右移动一个词的距离。</p><p>\5. option + 左删除：删除左侧一个词。</p><p>option + 右删除：删除右侧一个词。</p><p>\6. Command + s：保存。</p><p>以上就是常用的快捷操作，练习几次一定会大大提高开发效率。</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[BayesDecisionTheory]]></title>
             <link>https://sileaver.github.io/blog/2022/05/28/BayesDecisionTheory</link>
