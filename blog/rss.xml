@@ -4,10 +4,18 @@
         <title>My Site Blog</title>
         <link>https://sileaver.github.io/blog</link>
         <description>My Site Blog</description>
-        <lastBuildDate>Tue, 14 Jun 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 15 Jun 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[test]]></title>
+            <link>https://sileaver.github.io/blog/2022/06/15/test</link>
+            <guid>/2022/06/15/test</guid>
+            <pubDate>Wed, 15 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[test]]></description>
+            <content:encoded><![CDATA[<p>test</p><p>测试图床</p><p><img loading="lazy" src="C:/Users/a/Documents/Tencent%20Files/541127889/FileRecv/MobileFile/Screenshot_20210807_095541_e24760d1d02f1ef481aac8.jpg" alt="Screenshot_20210807_095541_e24760d1d02f1ef481aac8" class="img_E7b_"></p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[jupyter]]></title>
             <link>https://sileaver.github.io/blog/2022/6/14/jupyter</link>

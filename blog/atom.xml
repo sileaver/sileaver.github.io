@@ -2,11 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sileaver.github.io/blog</id>
     <title>My Site Blog</title>
-    <updated>2022-06-14T00:00:00.000Z</updated>
+    <updated>2022-06-15T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sileaver.github.io/blog"/>
     <subtitle>My Site Blog</subtitle>
     <icon>https://sileaver.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[test]]></title>
+        <id>/2022/06/15/test</id>
+        <link href="https://sileaver.github.io/blog/2022/06/15/test"/>
+        <updated>2022-06-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[test]]></summary>
+        <content type="html"><![CDATA[<p>test</p><p>测试图床</p><p><img loading="lazy" src="C:/Users/a/Documents/Tencent%20Files/541127889/FileRecv/MobileFile/Screenshot_20210807_095541_e24760d1d02f1ef481aac8.jpg" alt="Screenshot_20210807_095541_e24760d1d02f1ef481aac8" class="img_E7b_"></p>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[jupyter]]></title>
         <id>/2022/6/14/jupyter</id>
