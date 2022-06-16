@@ -2,11 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sileaver.github.io/blog</id>
     <title>My Site Blog</title>
-    <updated>2022-06-15T00:00:00.000Z</updated>
+    <updated>2022-06-16T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sileaver.github.io/blog"/>
     <subtitle>My Site Blog</subtitle>
     <icon>https://sileaver.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[ColorJittering]]></title>
+        <id>/2022/6/16/ColorJittering</id>
+        <link href="https://sileaver.github.io/blog/2022/6/16/ColorJittering"/>
+        <updated>2022-06-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[色彩抖动]]></summary>
+        <content type="html"><![CDATA[<p>色彩抖动</p><p>这篇的开始，我们得重温一下数字图像的记录方式。将光从最暗到最亮进行量化，然后用正整数来记录，是数字图像的最核心的记录原理。但其中会引发一个思考，自然光的明暗渐变是无限光滑的，而24<a href="https://so.csdn.net/so/search?q=%E4%BD%8D%E5%9B%BE&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener noreferrer">位图</a>像的红绿蓝三色光，每种的渐变层数最多256级，那么会不会丢失细节？答案是明确的，细节一定会丢失。未来如果能普及48位图像，那么每一种原色光的记录级数可以达到65536级，将有巨大的进步，但它依然无法实现自然光无限光滑的效果。未来科技进一步发达，如果出现192位的图像，它能够做到的是将记录层次记录得更细密，更加接近无限光滑，但始终难以实现真正意义上的无限光滑。</p><p>问题出现，如果记录一个介于整数A和B之间的颜色时，该怎么办？假设A是255，B是254，它们之间不可能再出现一个整数，这个记录将无法进行。此时，我们需要开始了解“色彩的抖动”了。</p><p>因为人眼的分辨率是有限的，当两种颜色混杂在一起，且超过人眼能处理的分辨率范围时，人眼会自动将两种颜色混合</p><p><img loading="lazy" src="https://sileaver.oss-cn-hangzhou.aliyuncs.com/img/image-20220615213422606.png" alt="image-20220615213422606" class="img_E7b_"></p><p>所以可以用比较少的颜色来表示更多的颜色</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="关于颜色抖动数据增强">关于颜色抖动数据增强<a class="hash-link" href="#关于颜色抖动数据增强" title="Direct link to heading">​</a></h2><p>色彩抖动是通过随机调整原始图片的饱和度，亮度，对比度来对产生新的图像，增加数据集</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[vscode]]></title>
+        <id>/2022/6/16/vscode</id>
+        <link href="https://sileaver.github.io/blog/2022/6/16/vscode"/>
+        <updated>2022-06-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[c/c++和python的基本配置还是很简单的]]></summary>
+        <content type="html"><![CDATA[<h1>vscode 环境配置</h1><p>c/c++和python的基本配置还是很简单的</p><p>c/c++：<a href="https://zhuanlan.zhihu.com/p/87864677" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/87864677</a></p><p>python: <a href="https://zhuanlan.zhihu.com/p/64994681" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/64994681</a></p>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[test]]></title>
         <id>/2022/06/15/test</id>
@@ -14,6 +30,16 @@
         <updated>2022-06-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[test]]></summary>
         <content type="html"><![CDATA[<p>test</p><p>测试图床</p><p><img loading="lazy" src="https://sileaver.oss-cn-hangzhou.aliyuncs.com/img/Screenshot_20210807_095541_e24760d1d02f1ef481aac8.jpg" alt="Screenshot_20210807_095541_e24760d1d02f1ef481aac8" class="img_E7b_"></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[cutmix]]></title>
+        <id>/2022/6/15/cutmix</id>
+        <link href="https://sileaver.github.io/blog/2022/6/15/cutmix"/>
+        <updated>2022-06-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[cutmix]]></summary>
+        <content type="html"><![CDATA[<p>cutmix</p><p>Mixup、Cutout和CutMix三种数据增强方法
+作者在论文中对比了三种数据增强的方法：Mixup,Cutout和CutMix在数据集中的性能。通过观察下图可以发现，CutMix在填充了训练集中的其他照片的同时，label也进行了相同比例转换。</p><p><img loading="lazy" src="https://sileaver.oss-cn-hangzhou.aliyuncs.com/img/image-20220615215236214.png" alt="image-20220615215236214" class="img_E7b_">
+CutMix最大程度的利用了同一张图像上的两种不同图像信息。具有更好的分类性能和目标定位功能。</p><p>保证在一幅图像中从局部视角上识别出两个目标，提高了训练效率。为了验证CutMix确实学习去识别两个目标，作者对CutMix、Cutout和Mixup进行了比较。通过观察下面的实验结果可以发现，CutMix能够精准的定位两个类别目标。</p><p><img loading="lazy" src="https://sileaver.oss-cn-hangzhou.aliyuncs.com/img/image-20220615215332616.png" alt="image-20220615215332616" class="img_E7b_"></p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[jupyter]]></title>
