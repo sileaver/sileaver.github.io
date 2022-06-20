@@ -21,7 +21,7 @@
         <link href="https://sileaver.github.io/blog/2022/6/16/vscode"/>
         <updated>2022-06-16T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[c/c++和python的基本配置还是很简单的]]></summary>
-        <content type="html"><![CDATA[<h1>vscode 环境配置</h1><p>c/c++和python的基本配置还是很简单的</p><p>c/c++：<a href="https://zhuanlan.zhihu.com/p/87864677" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/87864677</a></p><p>python: <a href="https://zhuanlan.zhihu.com/p/64994681" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/64994681</a></p>]]></content>
+        <content type="html"><![CDATA[<h1>vscode 环境配置</h1><p>c/c++和python的基本配置还是很简单的</p><p>c/c++：<a href="https://zhuanlan.zhihu.com/p/87864677" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/87864677</a></p><p>python: <a href="https://zhuanlan.zhihu.com/p/64994681" target="_blank" rel="noopener noreferrer">https://zhuanlan.zhihu.com/p/64994681</a></p><p>好吧，有必要更新一下</p><p>首先，c文件是不能运行cpp的</p><p><strong>然后，vscode本身并不是编译完c文件以后就自动运行的。</strong></p><p><strong>是需要把launch.json中的"externalConsole": false改为"externalConsole": true即可。</strong></p><p>同时有可能遇到中文乱码问题</p><p><img loading="lazy" src="https://sileaver.oss-cn-hangzhou.aliyuncs.com/img/image-20220620220636678.png" alt="image-20220620220636678" class="img_E7b_"></p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[test]]></title>
