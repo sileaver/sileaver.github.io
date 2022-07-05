@@ -4,10 +4,26 @@
         <title>My Site Blog</title>
         <link>https://sileaver.github.io/blog</link>
         <description>My Site Blog</description>
-        <lastBuildDate>Thu, 16 Jun 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 05 Jul 2022 10:45:13 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[opencv]]></title>
+            <link>https://sileaver.github.io/blog/opencv</link>
+            <guid>/opencv</guid>
+            <pubDate>Tue, 05 Jul 2022 10:45:13 GMT</pubDate>
+            <description><![CDATA[opencv]]></description>
+            <content:encoded><![CDATA[<p>opencv</p><p>当你的opencv引用出问题的时候</p><p>请记住</p><div class="codeBlockContainer_I0IT theme-code-block"><div class="codeBlockContent_wNvx" style="color:#393A34;background-color:#f6f8fa"><pre tabindex="0" class="prism-code language-text codeBlock_jd64 thin-scrollbar"><code class="codeBlockLines_mRuA"><span class="token-line" style="color:#393A34"><span class="token plain">pip install opencv-contrib-python</span><br></span></code></pre><button type="button" aria-label="Copy code to clipboard" title="Copy" class="copyButton_eDfN clean-btn"><span class="copyButtonIcons_W9eQ" aria-hidden="true"><svg class="copyButtonIcon_XEyF" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_i9w9" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div><p>顺便一提</p><p>opencv是这个</p><div class="codeBlockContainer_I0IT theme-code-block"><div class="codeBlockContent_wNvx" style="color:#393A34;background-color:#f6f8fa"><pre tabindex="0" class="prism-code language-text codeBlock_jd64 thin-scrollbar"><code class="codeBlockLines_mRuA"><span class="token-line" style="color:#393A34"><span class="token plain">pip install opencv-python</span><br></span></code></pre><button type="button" aria-label="Copy code to clipboard" title="Copy" class="copyButton_eDfN clean-btn"><span class="copyButtonIcons_W9eQ" aria-hidden="true"><svg class="copyButtonIcon_XEyF" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_i9w9" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[assert]]></title>
+            <link>https://sileaver.github.io/blog/2022/7/5/assert</link>
+            <guid>/2022/7/5/assert</guid>
+            <pubDate>Tue, 05 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[void assert (int expression);]]></description>
+            <content:encoded><![CDATA[<h1>assert()断言函数，用于在调试过程中捕捉程序错误</h1><p>void assert (int expression);</p><p>断言函数，用于在调试过程中捕捉程序的错误。</p><p>“断言”在语文中的意思是“断定”、“十分肯定地说”，在编程中是指对某种假设条件进行检测，如果条件成立就不进行任何操作，如果条件不成立就捕捉到这种错误，并打印出错误信息，终止程序执行。</p><p>assert() 会对表达式<code>expression</code>进行检测：</p><ul><li>如果<code>expression</code>的结果为 0（条件不成立），那么断言失败，表明程序出错，assert() 会向标准输出设备（一般是显示器）打印一条错误信息，并调用 abort() 函数终止程序的执行。</li><li>如果<code>expression</code>的结果为非 0（条件成立），那么断言成功，表明程序正确，assert() 不进行任何操作。</li></ul><p>要打印的错误信息的格式和内容没有统一的规定，这和标准库的具体实现有关（也可以说和编译器有关），但是错误信息至少应该包含以下几个方面的信息：</p><ul><li>断言失败的表达式，也即<code>expression</code>；</li><li>源文件名称；</li><li>断言失败的代码的行号。</li></ul><p>大部分编译器的格式如下所示：</p><p>Assertion failed: expression, file filename, line number</p><p>其实就是一个判断，如果判断为假，运行就会停止，并报一个判断错误。</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[ColorJittering]]></title>
             <link>https://sileaver.github.io/blog/2022/6/16/ColorJittering</link>
