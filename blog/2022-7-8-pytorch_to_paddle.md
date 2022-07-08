@@ -1,0 +1,356 @@
+# pytorch转paddle
+
+- Pytorch的API名称	Paddle的API名称
+- torch.abs	fluid.layers.abs(x, name=None)
+- torch.acos	fluid.layers.acos(x, name=None)
+- torch.add	fluid.layers.elementwise_add(x, y, axis=-1, act=None, name=None)
+- torch.allclose	fluid.layers.allclose
+- torch.arange	fluid.layers.range(start, end, step, dtype)
+- torch.argmax	fluid.layers.argmax
+- torch.argmin	fluid.layers.argmin
+- torch.argsort	fluid.layers.argsort(input, axis=-1, descending=False, name=None)
+- torch.as_strided	fluid.layers.strided_slice(input, axes, starts, ends, strides):
+- torch.asin	fluid.layers.asin(x, name=None)
+- torch.atan	fluid.layers.atan(x, name=None)
+- torch.cat	fluid.layers.concat(input, axis=0, name=None)
+- torch.ceil	fluid.layers.ceil
+- torch.chunk	fluid.layers.unstack(x, axis=0, num=None)
+- torch.cos	fluid.layers.cos
+- torch.cumsum	fluid.layers.cumsum(x, axis=None, exclusive=None, reverse=None)
+- torch.diag	fluid.layer.diag(diagonal)
+- torch.diag_embed	fluid.layer.diag_embed
+- torch.div	fluid.layers.elementwise_div(x, y, axis=-1, act=None, name=None)
+- torch.eq	fluid.layers.equal(x, y, cond=None)
+- torch.equal	fluid.layers.elementwise_equal(x, y, name=None)
+- torch.equal	fluid.layers.equal(x, y, cond=None)
+- torch.erf	fluid.layers.erf(x)
+- torch.exp	fluid.layers.exp(x, name=None)
+- torch.eye	fluid.layers.eye(num_rows, num_columns=None, batch_shape=None, dtype=‘float32’)
+- torch.flatten	fluid.layers.flatten
+- torch.flip	fluid.layers.flip
+- torch.floor	fluid.layers.floor(x, name=None)
+- torch.fmod	fluid.layers.elementwise_mod(x, y, axis=-1, act=None, name=None)
+- torch.from_numpy	fluid.dygraph.to_variable(value, block=None, name=None)
+- torch.full	fluid.layers.full(shape, fill_value, out=None, dtype=None, device=None, stop_gradient=True, name=None)
+- torch.full_like	fluid.layers.full_like
+- torch.gather	fluid.layers.gather(input, axis, index, out=None, sparse_grad=False, name=None)
+- torch.ge	fluid.layers.greater_equal
+- torch.gt	fluid.layers.greater_than
+- torch.le	fluid.layers.less_equal
+- torch.linspace	fluid.layers.linspace(start, stop, num, dtype)
+- torch.log	fluid.layers.log(x, name=None)
+- torch.logical_not	fluid.layers.logical_not(x, out=None, name=None)
+- torch.logical_xor	fluid.layers.logical_xor(x, y, out=None, name=None)
+- torch.lt	fluid.layers.less_than
+- torch.masked_select	fluid.layers.masked_select
+- torch.matmul	fluid.layers.matmul(x, y, transpose_x=False, transpose_y=False, alpha=1.0, name=None)
+- torch.max	fluid.layers.max(input, axis=None, keepdim=False, out=None, name=None) -> (Tensor, LongTensor)
+- torch.mean	fluid.layers.reduce_mean(input, dim=None, keep_dim=False, name=None)
+- torch.min	fluid.layers.min
+- torch.mm	fluid.layers.mm
+- torch.mul	fluid.layers.mul
+- torch.mv	fluid.layers.matmul(x, y, transpose_x=False, transpose_y=False, alpha=1.0, name=None)
+- torch.ne	fluid.layers.not_equal
+- torch.nn.AdaptiveAvgPool2d	fluid.layers.adaptive_pool2d
+- torch.nn.AdaptiveAvgPool3d	fluid.layers.adaptive_pool3d
+- torch.nn.AdaptiveMaxPool2d	fluid.layers.adaptive_pool2d
+- torch.nn.AdaptiveMaxPool3d	fluid.layers.adaptive_pool3d
+- torch.nn.add_module	fluid.dygraph.Layer.add_sublayer(name, sublayer)
+- torch.nn.append	fluid.dygraph.LayerList.append(sublayer)
+- torch.nn.append	fluid.dygraph.ParameterList.append(parameter)
+- torch.nn.AvgPool2d	fluid.layers.pool2d(pool_type为’avg’)
+- torch.nn.AvgPool3d	fluid.layers.pool3d(pool_type为’avg’)
+- torch.nn.BatchNorm1d	fluid.layers.batch_norm(input, act=None, is_test=False, momentum=0.9, epsilon=1e-05, param_attr=None, bias_attr=None, data_layout=‘NCHW’, in_place=False, name=None, moving_mean_name=None, moving_variance_name=None, do_model_average_for_mean_and_var=False, use_global_stats=False)
+- torch.nn.BatchNorm2d	fluid.layers.batch_norm(input, act=None, is_test=False, momentum=0.9, epsilon=1e-05, param_attr=None, bias_attr=None, data_layout=‘NCHW’, in_place=False, name=None, moving_mean_name=None, moving_variance_name=None, do_model_average_for_mean_and_var=False, use_global_stats=False)
+- torch.nn.BatchNorm3d	fluid.layers.batch_norm(input, act=None, is_test=False, momentum=0.9, epsilon=1e-05, param_attr=None, bias_attr=None, data_layout=‘NCHW’, in_place=False, name=None, moving_mean_name=None, moving_variance_name=None, do_model_average_for_mean_and_var=False, use_global_stats=False)
+- torch.nn.Bilinear	fluid.layers.bilinear_tensor_product(x, y, size, act=None, name=None, param_attr=None, bias_attr=None)
+- torch.nn.ConstantPad1d	fluid.layers.pad
+- torch.nn.ConstantPad2d	fluid.layers.pad / fluid.layers.pad2d
+- torch.nn.ConstantPad3d	fluid.layers.pad
+- torch.nn.Conv2d	fluid.dygraph.Conv2D
+- torch.nn.Conv3d	fluid.dygraph.Conv3D
+- torch.nn.ConvTranspose2d	fluid.layers.conv2d_transpose
+- torch.nn.ConvTranspose3d	fluid.layers.conv3d_transpose
+- torch.nn.double	fluid.layers.cast(x, dtype)
+- torch.nn.Dropout	fluid.layers.dropout(x, dropout_prob, is_test=False, seed=None, name=None, dropout_implementation=‘downgrade_in_infer’)
+- torch.nn.ELU	fluid.layers.elu(x, alpha=1.0, name=None)
+- torch.nn.Embedding	fluid.dygraph.Embedding
+- torch.nn.eval	fluid.dygraph.Layer.eval()
+- torch.nn.float	fluid.layers.cast(x, dtype)
+- torch.nn.Fold	fluid.layers.unfold
+- torch.nn.functional.adaptive_avg_pool2d	fluid.layers.adaptive_pool2d
+- torch.nn.functional.adaptive_avg_pool3d	fluid.layers.adaptive_pool3d
+- torch.nn.functional.adaptive_max_pool2d	fluid.layers.adaptive_pool2d
+- torch.nn.functional.adaptive_max_pool3d	fluid.layers.adaptive_pool3d
+- torch.nn.functional.affine_grid	fluid.layers.affine_grid
+- torch.nn.functional.avg_pool2d	fluid.layers.pool2d(input, pool_size=-1, pool_type=“max”, pool_stride=1, pool_padding=0, global_pooling=False, use_cudnn=True, ceil_mode=False, name=None, exclusive=True, data_format=“NCHW”)设置pool_type=“avg”
+- torch.nn.functional.avg_pool3d	fluid.layers.pool3d(input, pool_size=-1, pool_type=“max”, pool_stride=1, pool_padding=0, global_pooling=False, use_cudnn=True, ceil_mode=False, name=None, exclusive=True, data_format=“NCDHW”)设置pool_type=“avg”
+- torch.nn.functional.cross_entropy	fluid.layers.softmax_with_cross_entropy
+- torch.nn.functional.ctc_loss	fluid.layers.warpctc
+- torch.nn.functional.elu	fluid.layers.elu
+- torch.nn.functional.embedding	fluid.embedding
+- torch.nn.functional.embedding_bag	fluid.contrib.fused_embedding_seq_pool
+- torch.nn.functional.glu	fluid.nets.glu(input, dim=-1)
+- torch.nn.functional.grid_sample	fluid.layers.grid_sampler
+- torch.nn.functional.hardshrink	fluid.layers.hard_shrink
+- torch.nn.functional.interpolate	fluid.layers.interpolate
+- torch.nn.functional.kl_div	fluid.layers.kldiv_loss
+- torch.nn.functional.leaky_relu	fluid.layers.leaky_relu
+- torch.nn.functional.logsigmoid	fluid.layers.logsigmoid
+- torch.nn.functional.margin_ranking_loss	fluid.layers.margin_rank_loss(label, left, right, margin=0.1, name=None)
+- torch.nn.functional.max_pool2d	fluid.layers.pool2d(input, pool_size=-1, pool_type=“max”, pool_stride=1, pool_padding=0, global_pooling=False, use_cudnn=True, ceil_mode=False, name=None, exclusive=True, data_format=“NCHW”)设置pool_type=“max”
+- torch.nn.functional.max_pool3d	fluid.layers.pool3d(input, pool_size=-1, pool_type=“max”, pool_stride=1, pool_padding=0, global_pooling=False, use_cudnn=True, ceil_mode=False, name=None, exclusive=True, data_format=“NCDHW”)设置pool_type=“max”
+- torch.nn.functional.mse_loss	fluid.layers.mse_loss(input, label)
+- torch.nn.functional.one_hot	fluid.one_hot
+- torch.nn.functional.pad	fluid.layers.pad(x, paddings, pad_value=0.0, name=None)
+- torch.nn.functional.pixel_shuffle	fluid.layers.pixel_shuffle(x, upscale_factor)
+- torch.nn.functional.prelu	fluid.layers.prelu(x, mode, param_attr=None, name=None)
+- torch.nn.functional.relu	fluid.layers.relu(x, name=None)
+- torch.nn.functional.relu6	fluid.layers.relu6
+- torch.nn.functional.selu	fluid.layers.selu
+- torch.nn.functional.sigmoid	fluid.layers.sigmoid
+- torch.nn.functional.smooth_l1_loss	fluid.layers.smooth_l1(x, y, inside_weight=None, outside_weight=None, sigma=None)
+- torch.nn.functional.softmax	fluid.layers.softmax
+- torch.nn.functional.softplus	fluid.layers.softplus
+- torch.nn.functional.softshrink	fluid.layers.softshrink
+- torch.nn.functional.softsign	fluid.layers.softsign
+- torch.nn.functional.tanh	fluid.layers.tanh
+- torch.nn.functional.tanhshrink	fluid.layers.tanh_shrink
+- torch.nn.functional.threshold	fluid.layers.thresholded_relu
+- torch.nn.functional.unfold	fluid.layers.unfold(x, kernel_size, strides=1, paddings=0, dilation=1, name=None)
+- torch.nn.GroupNorm	fluid.layers.group_norm(input, groups, epsilon=1e-05, param_attr=None, bias_attr=None, act=None, data_layout=‘NCHW’, name=None)
+- torch.nn.GRU	fluid.layers.dynamic_gru
+- torch.nn.GRUCell	fluid.layers.GRUCell
+- torch.nn.half	fluid.layers.cast(x, dtype)
+- torch.nn.Hardshrink	fluid.layers.hard_shrink(x, threshold=None)
+- torch.nn.init.constant_	fluid.initializer.ConstantInitializer(value=0.0, force_cpu=False)
+- torch.nn.init.eye_	fluid.layers.eye(num_rows, num_columns=None, batch_shape=None, dtype=‘float32’)
+- torch.nn.init.kaiming_normal_	fluid.initializer.MSRAInitializer(uniform=True, fan_in=None, seed=0)
+- torch.nn.init.kaiming_uniform_	fluid.initializer.MSRAInitializer(uniform=True, fan_in=None, seed=0)
+- torch.nn.init.normal_	fluid.initializer.NormalInitializer(loc=0.0, scale=1.0, seed=0)
+- torch.nn.init.ones_	fluid.layers.ones(shape, dtype, force_cpu=False)
+- torch.nn.init.uniform_	fluid.initializer.UniformInitializer(low=-1.0, high=1.0, seed=0)
+- torch.nn.init.xavier_normal_	fluid.initializer.XavierInitializer(uniform=True, fan_in=None, fan_out=None, seed=0
+- torch.nn.init.xavier_uniform_	fluid.initializer.XavierInitializer(uniform=True, fan_in=None, fan_out=None, seed=0
+- torch.nn.init.zeros_	fluid.layers.zeros(shape, dtype, force_cpu=False)
+- torch.nn.InstanceNorm1d	fluid.layers.instance_norm
+- torch.nn.InstanceNorm2d	fluid.layers.instance_norm
+- torch.nn.InstanceNorm3d	fluid.layers.instance_norm
+- torch.nn.LayerNorm	fluid.layers.layer_norm(input, scale=True, shift=True, begin_norm_axis=1, epsilon=1e-05, param_attr=None, bias_attr=None, act=None, name=None)
+- torch.nn.LeakyReLU	fluid.layers.leaky_relu(x, alpha=0.02, name=None)
+- torch.nn.Linear	fluid.dygraph.Linear(input_dim, output_dim, param_attr=None, bias_attr=None, act=None, dtype=‘float32’)
+- torch.nn.load_state_dict	fluid.dygraph.Layer.set_dict(stat_dict, include_sublayers=True)
+- torch.nn.LogSigmoid	fluid.layers.logsigmoid(x, name=None)
+- torch.nn.LSTM	fluid.layers.lstm
+- torch.nn.LSTMCell	fluid.layers.LSTMCell
+- torch.nn.MarginRankingLoss	fluid.layers.margin_rank_loss(label, left, right, margin=0.1, name=None)
+- torch.nn.MaxPool2d	fluid.layers.pool2d(pool_type为’max’)
+- torch.nn.MaxPool3d	fluid.layers.pool3d(pool_type为’max’)
+- torch.nn.Module	fluid.dygraph.Layer()
+- torch.nn.modules	fluid.dygraph.Layer.sublayers(include_sublayers=True)
+- torch.nn.MSELoss	fluid.dygraph.MSELoss(input, label)
+- torch.nn.MultiheadAttention	fluid.nets.scaled_dot_product_attention
+- torch.nn.named_modules	fluid.dygraph.Layer.named_sublayers(prefix=’’,include_sublayers=True,include_self=False,layers_set=None)
+- torch.nn.named_parameters	fluid.dygraph.Layer.named_parameters(prefix=’’, include_sublayers=True)
+- torch.nn.ParameterList	fluid.dygraph.ParameterList
+- torch.nn.parameters	fluid.dygraph.Layer.parameters(include_sublayers=True)
+- torch.nn.PixelShuffle	fluid.layers.pixel_shuffle
+- torch.nn.PReLU	fluid.dygraph.Prelu
+- torch.nn.ReflectionPad2d	fluid.layers.pad2d
+- torch.nn.register_parameter	fluid.dygraph.Layer.add_parameter(name, parameter)
+- torch.nn.ReLU	fluid.layers.relu(x, name=None)
+- torch.nn.ReLU6	fluid.layers.relu6
+- torch.nn.ReplicationPad2d	fluid.layers.pad2d
+- torch.nn.requires_grad_	fluid.Variable().stop_gradient
+- torch.nn.RNN	fluid.layers.rnn
+- torch.nn.RNNCell	fluid.layers.RNNCell
+- torch.nn.SELU	fluid.layers.selu
+- torch.nn.Sequential	fluid.dygraph.Sequential(*layers)
+- torch.nn.Sigmoid	fluid.layers.sigmoid(x, name=None)
+- torch.nn.SmoothL1Loss	fluid.layers.smooth_l1(x, y, inside_weight=None, outside_weight=None, sigma=None)
+- torch.nn.Softmax	fluid.layers.softmax(input, use_cudnn=False, name=None, axis=-1)
+- torch.nn.Softplus	fluid.layers.softplus
+- torch.nn.Softshrink	fluid.layers.softshrink(x, alpha=None)
+- torch.nn.Softsign	fluid.layers.softsign(x, name=None)
+- torch.nn.state_dict	fluid.dygraph.Layer.state_dict
+- torch.nn.Tanh	fluid.layers.tanh(x, name=None)
+- torch.nn.Tanhshrink	fluid.layers.tanh_shrin
+- torch.nn.Threshold	fluid.layers.thresholded_relu(x, threshold=None)
+- torch.nn.train	fluid.dygraph.Layer.train()
+- torch.nn.type	fluid.layers.cast(x, dtype)
+- torch.nn.UpsamplingBilinear2d	fluid.layers.resize_bilinear
+- torch.nn.UpsamplingNearest2d	fluid.layers.resize_nearest
+- torch.nn.zero_grad	fluid.dygraph.Layer.clear_gradients()
+- torch.nn.ZeroPad2d	fluid.layers.pad / fluid.layers.pad2d
+- torch.norm	fluid.layers.l2_normalize
+- torch.normal	fluid.layers.gaussian_random(shape, mean=0.0, std=1.0, seed=0, dtype=‘float32’)
+- torch.numel	fluid.layers.size(input)
+- torch.ones	fluid.layers.ones
+- torch.ones_like	fluid.layers.ones_like
+- torch.pow	fluid.layers.pow
+- torch.prod	fluid.layers.reduce_prod(input, dim=None, keep_dim=False, name=None)
+- torch.rand_like	fluid.layers.gaussian_random_batch_size_like(input, shape, input_dim_idx=0, output_dim_idx=0, mean=0.0, std=1.0, seed=0, dtype=‘float32’)[
+- torch.randint	fluid.layers.randint(low, high=None, shape=None, out=None, dtype=None, device=None, stop_gradient=False, seed=0, name=None)
+- torch.randn	fluid.layers.randn
+- torch.randn_like	fluid.layers.gaussian_random_batch_size_like
+- torch.randperm	fluid.layers.randperm
+- torch.range	fluid.layers.range
+- torch.reciprocal	fluid.layers.reciprocal(x, name=None)
+- torch.reshape	fluid.layers.reshape(x, shape, actual_shape=None, act=None, inplace=False, name=None)
+- torch.roll	fluid.layers.roll
+- torch.round	fluid.layers.round(x, name=None)
+- torch.rsqrt	fluid.layers.rsqrt(x, name=None)
+- torch.seed	fluid.Program.random_seed
+- torch.set_num_interop_threads	fluid.ExecutionStrategy.num_threads
+- torch.set_num_threads	fluid.cpu_places(device_count=None)
+- torch.sigmoid	fluid.layers.sigmoid(x, name=None)
+- torch.sign	fluid.layers.sign(x)
+- torch.sin	fluid.layers.sin(x, name=None)
+- torch.split	fluid.layers.split(input, num_or_sections, dim=-1, name=None)
+- torch.sqrt	fluid.layers.squeeze(input, axes, name=None)
+- torch.squeeze	fluid.layers.squeeze(input, axes, name=None)
+- torch.stack	fluid.layers.stack(x, axis=0)
+- torch.std_mean	fluid.layers.mean
+- torch.sum	fluid.layers.sum(x)
+- torch.sum	fluid.layers.elementwise_add(x, y, axis=-1, act=None, name=None)
+- torch.tan	fluid.layers.tanh(x, name=None)
+- torch.tanh	fluid.layers.tanh(x, name=None)
+- torch.Tensor.abs	fluid.layers.abs(x, name=None)
+- torch.Tensor.abs_	fluid.layers.abs(x, name=None)
+- torch.Tensor.acos	fluid.layers.acos(x, name=None)
+- torch.Tensor.acos_	fluid.layers.acos(x, name=None)
+- torch.Tensor.add_	fluid.layers.elementwise_add(x, y, axis=-1, act=None, name=None)
+- torch.Tensor.asin_	fluid.layers.asin(x, name=None)
+- torch.Tensor.atan_	fluid.layers.atan(x, name=None)
+- torch.Tensor.backward	fluid.gradients(targets, inputs, target_gradients=None, no_grad_set=None)paddle 目标变量和起始
+- torch.Tensor.bfloat16	fluid.layers.cast(x, float16)
+- torch.Tensor.bmm	fluid.layers.matmul
+- torch.Tensor.bool	fluid.layers.cast(x, bool)
+- torch.Tensor.byte	fluid.layers.cast(x, uint8)
+- torch.Tensor.ceil	fluid.layers.ceil
+- torch.Tensor.clamp	fluid.layers.clip
+- torch.Tensor.clamp_	fluid.layers.clip(x, min, max, name=None)
+- torch.Tensor.clone	fluid.layers.assign(input, output=None)
+- torch.Tensor.cos	fluid.layers.cos
+- torch.Tensor.cumsum	fluid.layers.cumsum
+- torch.Tensor.dequantize	fluid.layers.dequantize()
+- torch.Tensor.diag	fluid.layers.diag
+- torch.Tensor.div	fluid.layers.elementwise_div(x, y, axis=-1, act=None, name=None)
+- torch.Tensor.eq	fluid.layers.equal
+- torch.Tensor.eq_	fluid.layers.equal(x, y, cond=None)
+- torch.Tensor.exp	fluid.layers.exp(x, name=None)
+- torch.Tensor.exp_	fluid.layers.exp(x, name=None)
+- torch.Tensor.expand	fluid.layers.expand(x, expand_times, name=None)
+- torch.Tensor.expand_as	fluid.layers.expand_as(x, target_tensor, name=None)
+- torch.Tensor.fill_diagonal_	fluid.layers.diag(diagonal)
+- torch.Tensor.flatten	fluid.layers.flatten
+- torch.Tensor.flip	fluid.layers.reverse
+- torch.Tensor.floor	fluid.layers.floor
+- torch.Tensor.floor_	fluid.layers.floor(x, name=None)
+- torch.Tensor.fmod_	fluid.layers.elementwise_mod(x, y, axis=-1, act=None, name=None)
+- torch.Tensor.gather	fluid.layers.gather(input, index, overwrite=True)
+- torch.Tensor.ge	fluid.layers.greater_equal(x, y, cond=None)
+- torch.Tensor.ge_	fluid.layers.greater_equal(x, y, cond=None)
+- torch.Tensor.gt	fluid.layers.greater_than(x, y, cond=None)
+- torch.Tensor.gt_	fluid.layers.greater_than(x, y, cond=None)
+- torch.Tensor.hardshrink	fluid.layers.hard_shrink(x, threshold=None)
+- torch.Tensor.index_select	fluid.layers.multiplex(inputs, index)
+- torch.Tensor.int	fluid.layers.cast
+- torch.Tensor.le	fluid.layers.less_equal(x, y, cond=None)
+- torch.Tensor.le_	fluid.layers.less_equal(x, y, cond=None)
+- torch.Tensor.log	fluid.layers.log(x, name=None)
+- torch.Tensor.log_	fluid.layers.log(x, name=None)
+- torch.Tensor.logical_not	fluid.layers.logical_not(x, out=None, name=None)
+- torch.Tensor.logical_not_	fluid.layers.logical_not(x, out=None, name=None)
+- torch.Tensor.logical_xor	fluid.layers.logical_xor(x, y, out=None, name=None)
+- torch.Tensor.logical_xor_	fluid.layers.logical_xor(x, y, out=None, name=None)
+- torch.Tensor.lt	fluid.layers.less_than(x, y, cond=None)
+- torch.Tensor.lt_	fluid.layers.less_than(x, y, force_cpu=None, cond=None)
+- torch.Tensor.masked_select	fluid.layers.masked_select(input, mask)
+- torch.Tensor.matmul	fluid.layers.matmul(x, y, transpose_x=False, transpose_y=False, alpha=1.0, name=None)
+- torch.Tensor.matrix_power	fluid.layers.pow(x, factor=1.0, name=None)
+- torch.Tensor.max	fluid.layers.reduce_max(input, dim=None, keep_dim=False, name=None)
+- torch.Tensor.mean	fluid.layers.mean(x, name=None)
+- torch.Tensor.min	"fluid.layers.reduce_min(input, dim=None, keep_dim=False, name=None) "
+- torch.Tensor.mul	fluid.layers.mul(x, y, x_num_col_dims=1, y_num_col_dims=1, name=None)
+- torch.Tensor.mul_	fluid.layers.mul(x, y, x_num_col_dims=1, y_num_col_dims=1, name=None)
+- torch.Tensor.multinomial	fluid.layers.sampling_id(x, min=0.0, max=1.0, seed=0, dtype=‘float32’)
+- torch.Tensor.mv	fluid.layers.mul(x, y, x_num_col_dims=1, y_num_col_dims=1, name=None)
+- torch.Tensor.narrow_copy	fluid.layers.slice(input, axes, starts, ends)
+- torch.Tensor.ndimension	fluid.layers.rank(input)
+- torch.Tensor.ne_	fluid.layers.not_equal(x, y, cond=None)
+- torch.Tensor.normal_	fluid.layers.Normal(loc, scale)
+- torch.Tensor.numel	fluid.layers.size(input)
+- torch.Tensor.permute	fluid.layers.transpose(x, perm, name=None)
+- torch.Tensor.pow	fluid.layers.pow(x, factor=1.0, name=None)
+- torch.Tensor.pow_	fluid.layers.pow(x, factor=1.0, name=None)
+- torch.Tensor.prod	fluid.layers.reduce_prod(input, dim=None, keep_dim=False, name=None)[
+- torch.Tensor.put_	fluid.layers.scatter(input, index, updates, name=None, overwrite=True)[源代码]
+- torch.Tensor.random_	fluid.layers.uniform_random(shape, dtype=‘float32’, min=-1.0, max=1.0, seed=0)
+- torch.Tensor.reciprocal	fluid.layers.reciprocal(x, name=None)
+- torch.Tensor.reciprocal_	fluid.layers.reciprocal(x, name=None)
+- torch.Tensor.remainder_	fluid.layers.elementwise_mod(x, y, axis=-1, act=None, name=None)
+- torch.Tensor.requires_grad	fluid.Variable.stop_gradient(属性)
+- torch.Tensor.requires_grad_	fluid.Variable.stop_gradient(属性)
+- torch.Tensor.reshape	fluid.layers.reshape(x, shape, actual_shape=None, act=None, inplace=False, name=None)
+- torch.Tensor.reshape_as	fluid.layers.reshape(x, shape, actual_shape=None, act=None, inplace=False, name=None)
+- torch.Tensor.resize_as_	fluid.layers.reshape(x, shape, actual_shape=None, act=None, inplace=False, name=None)
+- torch.Tensor.round	fluid.layers.round(x, name=None)
+- torch.Tensor.round_	fluid.layers.round(x, name=None)
+- torch.Tensor.rsqrt	fluid.layers.rsqrt(x, name=None)
+- torch.Tensor.rsqrt_	fluid.layers.rsqrt(x, name=None)
+- torch.Tensor.scatter	fluid.layers.scatter(input, index, updates, name=None, overwrite=True)
+- torch.Tensor.scatter_	fluid.layers.scatter(input, index, updates, name=None, overwrite=True)
+- torch.Tensor.scatter_add	fluid.layers.scatter(input, index, updates, name=None, overwrite=True)
+- torch.Tensor.scatter_add_	fluid.layers.scatter(input, index, updates, name=None, overwrite=True)
+- torch.Tensor.select	fluid.layers.slice
+- torch.Tensor.short	fluid.layers.cast(x, dtype)
+- torch.Tensor.sigmoid	fluid.layers.sigmoid(x, name=None)
+- torch.Tensor.sigmoid_	fluid.layers.sigmoid(x, name=None)
+- torch.Tensor.sign	fluid.layers.sign(x)
+- torch.Tensor.sign_	fluid.layers.sign(x)
+- torch.Tensor.sin	fluid.layers.sin(x, name=None)
+- torch.Tensor.sin_	fluid.layers.sin(x, name=None)
+- torch.Tensor.split	fluid.layers.split(input, num_or_sections, dim=-1, name=None)
+- torch.Tensor.sqrt	fluid.layers.sqrt(x, name=None)
+- torch.Tensor.sqrt_	fluid.layers.sqrt(x, name=None)
+- torch.Tensor.squeeze	fluid.layers.squeeze(input, axes, name=None)
+- torch.Tensor.squeeze_	fluid.layers.squeeze(input, axes, name=None)
+- torch.Tensor.sub	fluid.layers.elementwise_sub(x, y, axis=-1, act=None, name=None)
+- torch.Tensor.sub_	fluid.layers.elementwise_sub(x, y, axis=-1, act=None, name=None)
+- torch.Tensor.sum	fluid.layers.sum(x)
+- torch.Tensor.t_	fluid.layers.transpose(x, perm, name=None)
+- torch.Tensor.tanh	fluid.layers.tanh(x, name=None)
+- torch.Tensor.tanh_	fluid.layers.tanh(x, name=None)
+- torch.Tensor.to	fluid.layers.cast(x, dtype)
+- torch.Tensor.topk	fluid.layers.topk(input, k, name=None)
+- torch.Tensor.transpose	fluid.layers.transpose(x, perm, name=None)
+- torch.Tensor.transpose_	fluid.layers.transpose(x, perm, name=None)
+- torch.Tensor.trunc	fluid.layers.floor(x, name=None)
+- torch.Tensor.unbind	fluid.layers.unstack(x, axis=0, num=None)
+- torch.Tensor.unique	fluid.layers.unique
+- torch.Tensor.unsqueeze	fluid.layers.unsqueeze
+- torch.Tensor.unsqueeze_	fluid.layers.unsqueeze(input, axes, name=None)
+- torch.Tensor.view	fluid.layers.reshape(x, shape, actual_shape=None, act=None, inplace=False, name=None)
+- torch.Tensor.where	fluid.layers.where
+- torch.Tensor.zero_	fluid.layers.zeros(shape, dtype, force_cpu=False)
+- torch.topk	fluid.layers.topk(input, k, name=None)
+- torch.transpose	fluid.layers.transpose(x, perm, name=None)
+- torch.tril	fluid.layers.tril
+- torch.triu	fluid.layers.triu
+- torch.unique	fluid.layers.unique(x, dtype=‘int32’)
+- torch.unsqueeze	fluid.layers.unsqueeze(input, axes, name=None)
+- torch.var_mean	fluid.layers.mean
+- torch.where	fluid.layers.where(condition)
+- torch.zeros	fluid.layers.zeros(shape, dtype, force_cpu=False)
+- torch.zeros_like	fluid.layers.zeros_like(x, out=None)
+- torch.utils.data.dataloader.default_collate	fluid.io.default_collate_fn
+- torch.optim.lr_scheduler.StepLR	fluid.dygraph.StepDecay
+
+- torch.clamp	fluid.layers.clip
+- torch.meshgrid	fluid.layers.meshgrid
+- torch.view	fluid.layers.reshape
+- torch.repeat	fluid.layers.expand
+- torch.from_numpy	fluid.dygraph.to_variable
+- torch.type_as	fluid.layers.cast
+- 
