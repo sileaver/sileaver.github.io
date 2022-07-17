@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sileaver.github.io/blog</id>
     <title>My Site Blog</title>
-    <updated>2022-07-08T11:41:25.000Z</updated>
+    <updated>2022-07-17T11:49:47.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sileaver.github.io/blog"/>
     <subtitle>My Site Blog</subtitle>
@@ -11,9 +11,17 @@
         <title type="html"><![CDATA[opencv]]></title>
         <id>/opencv</id>
         <link href="https://sileaver.github.io/blog/opencv"/>
-        <updated>2022-07-08T11:41:25.000Z</updated>
+        <updated>2022-07-17T11:49:47.000Z</updated>
         <summary type="html"><![CDATA[opencv]]></summary>
         <content type="html"><![CDATA[<p>opencv</p><p>当你的opencv引用出问题的时候</p><p>请记住</p><div class="codeBlockContainer_I0IT theme-code-block"><div class="codeBlockContent_wNvx" style="color:#393A34;background-color:#f6f8fa"><pre tabindex="0" class="prism-code language-text codeBlock_jd64 thin-scrollbar"><code class="codeBlockLines_mRuA"><span class="token-line" style="color:#393A34"><span class="token plain">pip install opencv-contrib-python</span><br></span></code></pre><button type="button" aria-label="Copy code to clipboard" title="Copy" class="copyButton_eDfN clean-btn"><span class="copyButtonIcons_W9eQ" aria-hidden="true"><svg class="copyButtonIcon_XEyF" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_i9w9" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div><p>顺便一提</p><p>opencv是这个</p><div class="codeBlockContainer_I0IT theme-code-block"><div class="codeBlockContent_wNvx" style="color:#393A34;background-color:#f6f8fa"><pre tabindex="0" class="prism-code language-text codeBlock_jd64 thin-scrollbar"><code class="codeBlockLines_mRuA"><span class="token-line" style="color:#393A34"><span class="token plain">pip install opencv-python</span><br></span></code></pre><button type="button" aria-label="Copy code to clipboard" title="Copy" class="copyButton_eDfN clean-btn"><span class="copyButtonIcons_W9eQ" aria-hidden="true"><svg class="copyButtonIcon_XEyF" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_i9w9" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[annotation]]></title>
+        <id>/2022/7/17/annotation</id>
+        <link href="https://sileaver.github.io/blog/2022/7/17/annotation"/>
+        <updated>2022-07-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[annotation]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_mojV" id="annotation">annotation<a class="hash-link" href="#annotation" title="Direct link to heading">​</a></h3><p>注解，可以看作是对 一个 类/方法 的一个扩展的模版，每个 类/方法 按照注解类中的规则，来为 类/方法 注解不同的参数，在用到的地方可以得到不同的 类/方法 中注解的各种参数与值</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[PIL]]></title>
@@ -21,7 +29,7 @@
         <link href="https://sileaver.github.io/blog/2022/7/8/PIL"/>
         <updated>2022-07-08T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Image模块的convert()]]></summary>
-        <content type="html"><![CDATA[<h1>PIL</h1><p>Image模块的convert()</p><p>我们知道PIL中有九种不同模式。分别为1，L，P，RGB，RGBA，CMYK，YCbCr，I，F。</p><p>1、 模式“1”</p><p>模式“1”为二值图像，非黑即白。但是它每个像素用8个bit表示，0表示黑，255表示白。下面我们将lena图像转换为“1”图像。</p><p>2、 模式“L”</p><p>模式“L”为灰色图像，它的每个像素用8个bit表示，0表示黑，255表示白，其他数字表示不同的灰度。在PIL中，从模式“RGB”转换为“L”模式是按照下面的公式转换的：</p><p>3、 模式“P”</p><p>模式“P”为8位彩色图像，它的每个像素用8个bit表示，其对应的彩色值是按照调色板查询出来的。</p><p>4、 模式“RGBA”</p><p>模式“RGBA”为32位彩色图像，它的每个像素用32个bit表示，其中24bit表示红色、绿色和蓝色三个通道，另外8bit表示alpha通道，即透明通道。</p><p>5、 模式“CMYK”</p><p>模式“CMYK”为32位彩色图像，它的每个像素用32个bit表示。模式“CMYK”就是印刷四分色模式，它是彩色印刷时采用的一种套色模式，利用色料的三原色混色原理，加上黑色油墨，共计四种颜色混合叠加，形成所谓“全彩印刷”。</p><p>6、 模式“YCbCr”</p><p>模式“YCbCr”为24位彩色图像，它的每个像素用24个bit表示。YCbCr其中Y是指亮度分量，Cb指蓝色色度分量，而Cr指红色色度分量。人的肉眼对视频的Y分量更敏感，因此在通过对色度分量进行子采样来减少色度分量后，肉眼将察觉不到的图像质量的变化。</p><p>7、 模式“I”</p><p>模式“I”为32位整型灰色图像，它的每个像素用32个bit表示，0表示黑，255表示白，(0,255)之间的数字表示不同的灰度。在PIL中，从模式“RGB”转换为“I”模式是按照下面的公式转换的：</p><p>8、 模式“F”</p><p>模式“F”为32位浮点灰色图像，它的每个像素用32个bit表示，0表示黑，255表示白，(0,255)之间的数字表示不同的灰度。在PIL中，从模式“RGB”转换为“F”模式是按照下面的公式转换的：</p>]]></content>
+        <content type="html"><![CDATA[<h1>PIL</h1><p>Image模块的convert()</p><p>我们知道PIL中有九种不同模式。分别为1，L，P，RGB，RGBA，CMYK，YCbCr，I，F。</p><p>1、 模式“1”</p><p>模式“1”为二值图像，非黑即白。但是它每个像素用8个bit表示，0表示黑，255表示白。下面我们将lena图像转换为“1”图像。</p><p>2、 模式“L”</p><p>模式“L”为灰色图像，它的每个像素用8个bit表示，0表示黑，255表示白，其他数字表示不同的灰度。在PIL中，从模式“RGB”转换为“L”模式是按照下面的公式转换的：</p><p>3、 模式“P”</p><p>模式“P”为8位彩色图像，它的每个像素用8个bit表示，其对应的彩色值是按照调色板查询出来的。</p><p>4、 模式“RGBA”</p><p>模式“RGBA”为32位彩色图像，它的每个像素用32个bit表示，其中24bit表示红色、绿色和蓝色三个通道，另外8bit表示alpha通道，即透明通道。</p><p>5、 模式“CMYK”</p><p>模式“CMYK”为32位彩色图像，它的每个像素用32个bit表示。模式“CMYK”就是印刷四分色模式，它是彩色印刷时采用的一种套色模式，利用色料的三原色混色原理，加上黑色油墨，共计四种颜色混合叠加，形成所谓“全彩印刷”。</p><p>6、 模式“YCbCr”</p><p>模式“YCbCr”为24位彩色图像，它的每个像素用24个bit表示。YCbCr其中Y是指亮度分量，Cb指蓝色色度分量，而Cr指红色色度分量。人的肉眼对视频的Y分量更敏感，因此在通过对色度分量进行子采样来减少色度分量后，肉眼将察觉不到的图像质量的变化。</p><p>7、 模式“I”</p><p>模式“I”为32位整型灰色图像，它的每个像素用32个bit表示，0表示黑，255表示白，(0,255)之间的数字表示不同的灰度。在PIL中，从模式“RGB”转换为“I”模式是按照下面的公式转换的：</p><p>8、 模式“F”</p><p>模式“F”为32位浮点灰色图像，它的每个像素用32个bit表示，0表示黑，255表示白，(0,255)之间的数字表示不同的灰度。在PIL中，从模式“RGB”转换为“F”模式是按照下面的公式转换的：</p><h3 class="anchor anchorWithStickyNavbar_mojV" id="imagefromarray的用法实现array到image的转换">Image.fromarray的用法（实现array到image的转换）<a class="hash-link" href="#imagefromarray的用法实现array到image的转换" title="Direct link to heading">​</a></h3>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[linux_split_unzip]]></title>
