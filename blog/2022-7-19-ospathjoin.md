@@ -8,18 +8,18 @@ os.path.join()函数：连接两个或更多的路径名组件
 
 ### Demo
 
-import os
+`import os`
 
-Path1 = 'home'
-Path2 = 'develop'
-Path3 = 'code'
+`Path1 = 'home'`
+`Path2 = 'develop'`
+`Path3 = 'code'`
 
-Path10 = Path1 + Path2 + Path3
-Path20 = os.path.join(Path1,Path2,Path3)
-print ('Path10 = ',Path10)
-print ('Path20 = ',Path20)
+`Path10 = Path1 + Path2 + Path3`
+`Path20 = os.path.join(Path1,Path2,Path3)`
+`print ('Path10 = ',Path10)`
+`print ('Path20 = ',Path20)`
 
-**输出**
+`**输出**`
 
-Path10 = homedevelopcode
-Path20 = home\develop\code
+`Path10 = homedevelopcode`
+`Path20 = home\develop\code`
